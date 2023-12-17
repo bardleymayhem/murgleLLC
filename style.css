@@ -1,0 +1,11 @@
+* {
+    background-color: rgb(99, 99, 201);
+}
+
+nav li {
+    display: inline-block;
+}
+
+article p {
+    width: 500px;
+}
