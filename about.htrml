@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Murgle LLC</title>
+            <link rel="stylesheet" href="Resources\style.css">
+            <link rel="icon" type="image/x-icon" href="Resources/favicon.ico">
+        </head>
+
+        <body>
+            <img id="logo" src="Resources/logo.png">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                </ul>
+            </nav>
+            <article>
+                
+                
+                <h2>Nick Kreifels</h2>
+                <p>Murgle LLC is owned by creative entrepreneur Nick Kreifels. Nick has worked in and helped build small business from the bottom up. He has a life long passion for coding, science and music.</p>
+                <h2>Mark Rohrbaugh</h2>
+                <p>Co-founding this venture is Mark Rohrbaugh. Mark is a life long musician focused on guitar. Early on in his music developement, he found the traditional methods of learning music and music theory to be frustrating and convoluted. Murgle intends to change the game forever, making music learning, simpler, faster and more meaningful for everyone!</p>
+            </article>
+        </body>
+
+
+    </html>
