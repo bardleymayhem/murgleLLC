@@ -22,7 +22,7 @@ nav a {
     text-decoration: none;
 }
 
-img {
+#logo {
     display: block;
     top: 0;
     width: 70%;
@@ -31,6 +31,14 @@ img {
     border-color: hsl(290, 72%, 32%);
     border-style: outset;
     background-color: hsl(290, 72%, 28%);
+    padding: 0 11%;
+    margin: 0 auto;
+}
+#logo img {
+    display: block;
+    top: 0;
+    width: auto;
+    height: 250px;
     padding: 0 11%;
     margin: 0 auto;
 }
@@ -59,19 +67,32 @@ nav a:hover {
 }
 
 #nick, #mark, #aprill, #dan {
-    display: inline-block;
+    display: inline-flex;
     width: 330px;
     padding: 0 10px;
     font-size: x-large;
-    color:rgb(114, 114, 243);
+}
+
+summary, p,h1,h2,h3,h4,h5,h6 {
+    color:#0f0;
+}
+summary {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+summary:hover {
+    cursor:pointer;
 }
 
 #all {
+    background-color: #000;
     margin-top: 13px;
     margin-left: 35px;
     margin-right: 35px;
     padding-left:10px;
-    border: solid 4px rgb(114, 114, 243);
-    border-radius: 8px;
-    border-style: inset;
+    border: solid 3px #0f0;  
 }
