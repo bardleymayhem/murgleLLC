@@ -58,13 +58,14 @@ a:visited {
 }
 
 nav a{
-    color:#1c133a;
+    color:#fff;
 }
 nav a:visited {
-    color:#1c133a;
+    color:#fff;
 }
 nav a:hover {
-    color:#1c133a;
+    color:#ffc800;
+    text-shadow: 0px 0px 4px #ffc800;
 }
 
 #nick, #mark, #aprill, #dan {
@@ -77,9 +78,12 @@ nav a:hover {
 #all summary,#all p {
     color:#0f0;
 }
-p,h1,h2,h3,h4,h5,h6{
-    color: rgb(114, 114, 243);
+
+nav,summary,p,h1,h2,h3,h4,h5,h6{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(155, 155, 241);
 }
+
 summary {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -87,10 +91,12 @@ summary {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    position: sticky;
 }
 summary:hover {
     cursor:pointer;
+}
+#all summary:hover {
+    color:#fff;
 }
 
 #all {
@@ -103,4 +109,30 @@ summary:hover {
     border: solid 3px #0f0;
     overflow:auto;
     height: 320px;
+}
+
+.news {
+    background-color: #0000004f;
+    border-radius: 7px;
+    margin: auto;
+    width:70%;
+    margin-top:16px;
+    padding:16px 16px;
+    padding-bottom: 4px;
+}
+.news h1,.news h2{
+    display: inline;
+}
+.news h2 {
+    position: relative;
+    left:30px;
+    color: rgba(155, 155, 241,0.5);
+}
+
+.justhomepageshit h1, .justhomepageshit p {
+    text-align: center;
+    font-size:x-large;
+}
+.justhomepageshit p {
+    color:rgb(114, 114, 243)
 }
