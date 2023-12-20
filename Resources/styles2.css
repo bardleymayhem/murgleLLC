@@ -128,11 +128,17 @@ summary:hover {
     left:30px;
     color: rgba(155, 155, 241,0.5);
 }
+.news h1{
+    color:#99f;
+}
+.news p {
+    color:#99d;
+}
 
 .justhomepageshit h1, .justhomepageshit p {
     text-align: center;
     font-size:x-large;
 }
 .justhomepageshit p {
-    color:rgb(114, 114, 243)
+    color:rgb(114, 114, 243);
 }
