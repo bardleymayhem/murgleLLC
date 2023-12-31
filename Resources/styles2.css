@@ -5,7 +5,7 @@ body {
 
 
 /* this a fucken better style */
-nav {
+/* nav {
     position:fixed;
     border: 10px;
     border-color: hsl(290, 72%, 32%);
@@ -14,16 +14,36 @@ nav {
     background-image: linear-gradient(to top left, hsl(290, 72%, 28%) 0%, hsl(290, 69%, 20%) 100%);;
     box-shadow: 0px 0px 12px 4px #000000be;
     z-index: 999;
-}
+} */
 
 /* this style shit maybe? */
 /* nav {
     position:fixed;
     background-color: hsla(0, 0%, 0%, 0.304);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(9px);
     z-index: 999;
 } */
 
+/* an experimental style */
+nav {
+    position:fixed;
+    right:0;
+    top:0;
+    border: 10px;
+    border-color: hsla(290, 72%, 32%, 0.304);
+    border-style: outset;
+    background-color: hsla(290, 69%, 20%, 0.304);
+    background-image: linear-gradient(to top left, hsla(290, 72%, 28%, 0.304) 0%, hsla(290, 69%, 20%, 0.304) 100%);;
+    box-shadow: 0px 0px 12px 4px #0000004e;
+    backdrop-filter: blur(9px);
+    z-index: 999;
+}
+nav:hover {
+    border-color: hsl(290, 72%, 32%);
+    background-color: hsl(290, 69%, 20%);
+    background-image: linear-gradient(to top left, hsl(290, 72%, 28%) 0%, hsl(290, 69%, 20%) 100%);;
+    box-shadow: 0px 0px 12px 4px #000000be;
+}
 
 nav ul {
     margin: 0 auto;
@@ -40,7 +60,6 @@ nav a {
 
 #logo {
     display: block;
-    top: 0;
     width: 70%;
     height: 250px;
     border: 20px;
@@ -54,11 +73,11 @@ nav a {
 }
 #logo img {
     display: block;
-    top: 0;
     width: auto;
     height: 250px;
     padding: 0 11%;
     margin: 0 auto;
+    border-radius: 50%;
 }
 
 nav li {
@@ -103,6 +122,19 @@ nav a:hover {
 #all summary::selection, #all p::selection {
     color:#000;
     background-color: #0f0;
+}
+
+#all {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+ 
+    /*
+      Introduced in IE 10.
+      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+    */
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #all {
@@ -163,3 +195,11 @@ summary:hover {
 .justhomepageshit p {
     color:rgb(114, 114, 243);
 }
+
+/* html{
+    filter: brightness(9) contrast(12) invert();
+} */
+
+
+
+
