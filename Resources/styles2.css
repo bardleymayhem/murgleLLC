@@ -195,7 +195,7 @@ summary:hover {
 
 .justhomepageshit h1, .justhomepageshit p {
     text-align: center;
-    font-size:x-large;
+    font-size: larger;
 }
 .justhomepageshit p {
     color:rgb(114, 114, 243);
@@ -208,3 +208,6 @@ summary:hover {
 
 
 
+main p {
+    font-size:large;
+}
