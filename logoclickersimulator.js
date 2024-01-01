@@ -14,21 +14,33 @@ const logo = document.getElementById("logo").firstElementChild
 const audioeysourcey = document.getElementById("funnysource")
 // const sourceofaudio = document.createElement("source")
 
-
+let playing = false
 // i love a good init funciton that basically does all the loose code thingssss
 function init() {
     logo.style.cursor = "pointer"; // setting the cursor to pointer so its obvious you can click on it
     // sourceofaudio.src = "Resources/synthguitar.mp3" // *middle finger*
     
-    logo.appendChild(audioeysourcey);
+
+    // logo.appendChild(audioeysourcey);
     // audioeysourcey.appendChild(sourceofaudio)
     
     logo.addEventListener("click",()=>{
-        audioeysourcey.play();
-        logo.style.cursor = "default"; // for suggesting that you cant click on this anymore
+        if (!playing) {
+            audioeysourcey.play();
+            logo.parentElement.style.filter = "invert() saturate(10)"
+            logo.style.filter = "invert() saturate(10)"
+        } else {
+            audioeysourcey.load();
+            logo.parentElement.style.filter = ""
+            logo.style.filter = ""
+        }
+        playing=!playing
+        // logo.style.cursor = "default"; // for suggesting that you cant click on this anymore
     });
     audioeysourcey.addEventListener("ended",()=>{
-        logo.style.cursor = "pointer"; // when the riff ends make the suggestion you can click on it again
+        audioeysourcey.load();
+        logo.parentElement.style.filter = ""
+        logo.style.filter = ""
     });
 }
 
