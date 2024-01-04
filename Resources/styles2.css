@@ -27,23 +27,29 @@ body {
 /* an experimental style */
 nav {
     position:fixed;
-    right:0;
+    right: 0;
     top:0;
+    z-index: 999;
+}
+/* nav {
     border: 10px;
-    border-color: hsla(290, 72%, 32%, 0.304);
     border-style: outset;
+    border-color: hsla(290, 72%, 32%, 0.304);
     background-color: hsla(290, 69%, 20%, 0.304);
     background-image: linear-gradient(to top left, hsla(290, 72%, 28%, 0.304) 0%, hsla(290, 69%, 20%, 0.304) 100%);;
     box-shadow: 0px 0px 12px 4px #0000004e;
     backdrop-filter: blur(9px);
-    z-index: 999;
-}
-#funnysource {
-    position: fixed;
-    top:72px;
-    right:16px;
 }
 nav:hover {
+    border-color: hsl(290, 72%, 32%);
+    background-color: hsl(290, 69%, 20%);
+    background-image: linear-gradient(to top left, hsl(290, 72%, 28%) 0%, hsl(290, 69%, 20%) 100%);;
+    box-shadow: 0px 0px 12px 4px #000000be;
+} */
+
+nav {
+    border: 10px;
+    border-style: outset;
     border-color: hsl(290, 72%, 32%);
     background-color: hsl(290, 69%, 20%);
     background-image: linear-gradient(to top left, hsl(290, 72%, 28%) 0%, hsl(290, 69%, 20%) 100%);;
@@ -108,68 +114,11 @@ nav a:hover {
     color:#ffc800;
     text-shadow: 0px 0px 4px #ffc800;
 }
-
-#nick, #mark, #aprill, #dan {
-    display: inline-flex;
-    width: 320px;
-    padding: 0 10px;
-    font-size: x-large;
-}
-#nick details[open] summary,#mark details[open] summary,#dan details[open] summary,#aprill details[open] summary {
-    font-weight: bold;;
-    color:rgb(18, 139, 18)
-}
-
-#all summary,#all p {
-    color:#0f0;
-    font-family:'Courier New', Courier, monospace;
-}
-#all summary::selection, #all p::selection {
-    color:#000;
-    background-color: #0f0;
-}
-
-#all {
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
- 
-    /*
-      Introduced in IE 10.
-      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
-    */
-    -ms-user-select: none;
-    user-select: none;
-}
-
-#all {
-    background-color: hsl(0, 0%, 4%);
-    background-image: linear-gradient(to top, hsl(0, 0%, 2%) 0%, hsl(0, 0%, 5%) 100%);;
- }
-
-nav,summary,p,h1,h2,h3,h4,h5,h6{
+nav,summary,p,h1,h2,h3,h4,h5,h6,li{
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(155, 155, 241);
 }
 
-summary:hover {
-    cursor:pointer;
-}
-#all summary:hover {
-    color:#9f9;
-}
-
-#all {
-    background-color: #000;
-    margin-top: 13px;
-    margin-left: 35px;
-    margin-right: 35px;
-    padding-left:10px;
-    padding: 10px;
-    border: solid 3px #0f0;
-    /* overflow:auto; */
-    /* height: 320px; */
-}
 
 .news {
     background-color: #0000004f;
@@ -210,4 +159,71 @@ summary:hover {
 
 main p {
     font-size:large;
+}
+
+.baynaynayshitsicle {
+    margin-left:24px;
+}
+
+.fuNEYyouTubeEntrAy {
+    float: left;
+    margin-right:32px;
+    margin-bottom:42px;
+}
+
+.baynaynayshitsicle h2{
+    text-align:center;
+    margin-bottom:0;
+    margin-top:24px;
+}
+.baynaynayshitsicle hr{
+    width:60%;
+    margin-bottom:48px;
+}
+.fuNEYyouTubeEntrAy {
+    margin:0;
+}
+
+.fuNEYyouTubeEntrAy h4{
+    margin:0;
+    margin-top:4px;
+    margin-left:9px;
+    width:480px;
+    /* color:lightgray; */
+    font-weight:normal;
+    text-shadow:3px 3px 3px #000;
+}
+.fuNEYyouTubeEntrAy iframe{
+        /* border-radius:16px;
+        box-shadow: 0px 0px 8px 0px #000000be;
+        margin: 7px 8px; */
+    margin: -2px 0;
+}
+
+/* .fuNEYyouTubeEntrAy iframe:hover{
+    box-shadow: 0px 0px 8px 4px #ffc800be;
+} */
+
+#HOLYCOWITSTHECURRENTPAGE a{
+    font-weight: bolder;
+    color:black;
+    text-shadow: 0px 0px 4px #ffc800;
+    /* color:#ffc800; */
+}
+
+#hamburger a {
+    text-decoration:none;
+}
+
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+ 
+    /*
+      Introduced in IE 10.
+      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+    */
+    -ms-user-select: none;
+    user-select: none;
 }

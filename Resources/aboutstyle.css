@@ -1,0 +1,47 @@
+body {background-color: #000;}
+nav {
+    position:fixed;
+    top: 9px;
+    right: 9px;
+    z-index: 999;
+    background-color: rgb(0,0,0);
+    border: solid 3px #0f0;
+}
+nav a:hover { 
+    text-shadow: none;
+    color:#fff
+}
+nav ul {
+    margin: 0 auto;
+    padding: 5px 10px;
+    list-style: none;
+}
+nav li {
+    display: inline-block;
+    font-size: xx-large;
+    padding: 0px 9px;
+}
+nav a {
+    color:#0f0;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#HOLYCOWITSTHECURRENTPAGE a{
+    font-weight: normal;
+    color:#fff;
+    text-shadow: none;
+}
+
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+ 
+    /*
+      Introduced in IE 10.
+      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+    */
+    -ms-user-select: none;
+    user-select: none;
+}

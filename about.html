@@ -2,60 +2,167 @@
     <html lang="en">
         <head>
             <title>About Us!</title>
+            <!-- <link rel="stylesheet" href="Resources\aboutstyle.css"> -->
             <link rel="stylesheet" href="Resources\styles2.css">
             <link rel="icon" type="image/x-icon" href="Resources/favicon.ico">
+            <script src="Resources/jquery-3.7.1.js"></script>
+            <script>
+                // when making a new Member()
+                // please make another <li> with the same
+                // text as the id you put for new Member()
+                class Member {
+                    constructor(id, name, data) {
+                        this.id = id;
+                        this.name = name;
+                        this.data = data;
+                    }
+                }
+                const members = [
+                    new Member("nick","nirk kraffle","Murgle LLC is owned by creative entrepreneur Nick Kreifels. Nick has worked in and helped build small business from the bottom up. He has a life long passion for coding, science and music."),
+                    new Member("mark","merk herschenblergher","Co-founding this venture is Merk Hershchenblergher. Merk is a life long musician focused on guitar. Early on in his music developement, he found the traditional methods of learning music and music theory to be frustrating and convoluted. Merk, through Murgle, intends to change the game forever, making music learning, simpler, faster and more meaningful for everyone!"),
+                    new Member("aprill","aprillium","Murgle’s Director of HR, Aprill D’Louhy, has owned and operated a range of successful businesses, from landscaping to running a screen-printing shop and has many years of managing others under her belt. She continues to spend time practicing past life regression QHHT hypnosis. Aprill has an eye for detail and a knack for creating and enforcing policies and procedures."),
+                    new Member("dan","darnium","Our Head of Accounting and Payroll Director, Dan D’Louhy, spent a decade brewing from Colorado to the West Coast, helping to build up breweries such as Ninkasi and Odell Brewing Company. He spent another decade owning and operating a business building draft beer systems all over Oregon. Daniel is still co-owner of SlaughterHaus Meadery, a winery he founded in Eugene, Oregon in 2013. His passion and love for music is equal to his geek-level for math and numbers."),
+                    new Member("phil","philliam","sketchers guy"),
+                    new Member("rat","rat kibble","do not the rat"),
+                    new Member("dusk","dursk","music person"),
+                    new Member("goat","tung gurt","wrapper"),
+                ]
+                function setMemberFromId(id){
+                  for (let index = 0; index < members.length; index++) {
+                    const member = members[index];
+                    if (member.id==id) {
+                        $('#about-content').text(member.data)
+                    }
+                  }
+                  thing(id)
+                }
+                function getMemberFromId(id){
+                  for (let index = 0; index < members.length; index++) {
+                    const member = members[index];
+                    if (member.id==id) {
+                        return member
+                    }
+                  }
+                }
+                function thing(id){
+                    const listElements = document.getElementById("about-list").children
+                    for (let index = 0; index < listElements.length; index++) {
+                        const element = listElements[index];
+                        const member = getMemberFromId(id)
+                        const sharedID = id==member.id
+                        if(sharedID){
+                            // element.setAttribute('class','selection')
+                            document.getElementById('about-name').innerHTML = member.name
+                        }else{
+                            // element.setAttribute('class','')
+                        }
+                    }
+                }
+                $(document).ready(function(){
+                    const listElements = document.getElementById("about-list").children
+                    // maybe put a thing here to make new <li>s
+                    // instead of having to manually make your own?
+                    for (let index = 0; index < listElements.length; index++) {
+                        const element = listElements[index];
+                        const id = element.innerHTML
+                        const member = getMemberFromId(id)
+                        element.innerHTML = member.name
+                        element.addEventListener("click",()=>{
+                            setMemberFromId(id)
+                            thing(id)
+                        })
+                    }
+
+                    setMemberFromId('nick')
+                    thing('nick')
+                })
+            </script>
+            <style>
+                .selection {
+                    font-weight: bold;
+                }
+                #about-list {
+                    list-style: none;
+                    padding:0;
+                    /* width:96px; */
+                    overflow: visible;
+                    /* border: solid 3px #0f0; */
+                    /* padding:3px 6px; */
+                    float:right;
+                    text-align: right;
+                    -moz-user-select: -moz-none;
+                    -khtml-user-select: none;
+                    -webkit-user-select: none;
+                
+                    /*
+                    Introduced in IE 10.
+                    See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+                    */
+                    -ms-user-select: none;
+                    user-select: none;
+                }
+                #about-list li {
+                    cursor:pointer;
+                    font-size:x-large;
+                    padding: 3px 0;
+                }
+                #about-list li:hover {
+                    font-weight:bold;
+                }
+                #about-content {
+                    font-size:x-large;
+                }
+                #about-content::first-letter {
+                    font-size: xx-large;
+                    /* font-weight:bold; */
+                    text-transform: uppercase;
+                }
+                #about-list,#about-content,#about-name,h2,#about-list li {
+                    /* color:#0f0; */
+                    font-family: 'Courier New', Courier, monospace;
+                }
+                hr {
+                    color:rgba(127,255,127,0.25);
+                    margin:4px 0px 4px 0px;
+                }
+                h2 {
+                    text-transform: capitalize;
+                }
+                h2, #about-content {
+                    width:50%;
+                    margin: 24px auto;
+                    text-align:center;
+                }
+                @media only screen and (min-width: 900px) {
+                    
+                }
+                footer {
+                    position: fixed;
+                    bottom:8px;
+                    left: 6px;
+                    color: rgba(255,255,255,0.25);
+                    font-size: large;
+                }
+            </style>
         </head>
 
         <body>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="news.html">News</a></li>
-                </ul>
-            </nav>
             <audio id="funnysource"><source src="Resources/rockguitars.mp3"></audio>
             <div id="logo"><img src="Resources/logo.png" alt=""></div>
-
-             <div id="all">   
-            <div id="nick">
-                <details>
-                <summary>Nick Kreifels</summary>
-                <p>Murgle LLC is owned by creative entrepreneur Nick Kreifels. Nick has worked in and helped build small business from the bottom up. He has a life long passion for coding, science and music.</p>
-                </details>
-            </div>
-
-            <div id="mark">
-                <details>
-                <summary>Mark Rohrbaugh</summary>
-                <p>Co-founding this venture is Mark Rohrbaugh. Mark is a life long musician focused on guitar. Early on in his music developement, he found the traditional methods of learning music and music theory to be frustrating and convoluted. Mark, through Murgle, intends to change the game forever, making music learning, simpler, faster and more meaningful for everyone!</p>
-                </details>
-            </div>
-
-            <div id="aprill">
-                <details>
-                <summary>Aprill D’Louhy</summary>
-                <p>Murgle’s Director of HR, Aprill D’Louhy, has owned and operated a range of successful businesses, from
-                    landscaping to running a screen-printing shop and has many years of managing others under her belt.
-                    She continues to spend time practicing past life regression QHHT hypnosis. Aprill has an eye for detail
-                    and a knack for creating and enforcing policies and procedures.</p>
-                </details>
-                </div>
-
-            <div id="dan">
-                <details>
-                <summary>Daniel D’Louhy</summary>
-                <p>Our Head of Accounting and Payroll Director, Daniel D’Louhy, spent a decade brewing from Colorado to
-                    the West Coast, helping to build up breweries such as Ninkasi and Odell Brewing Company. He spent
-                    another decade owning and operating a business building draft beer systems all over Oregon. Daniel is
-                    still co-owner of SlaughterHaus Meadery, a winery he founded in Eugene, Oregon in 2013. His passion
-                    and love for music is equal to his geek-level for math and numbers.</p>
-                </details>
-                </div>
-            </div> 
-
-
-
+            <ul id="about-list" class="unselectable">
+                <li>nick</li>
+                <li>mark</li>
+                <li>dan</li>
+                <li>aprill</li>
+                <li>phil</li>
+                <li>rat</li>
+                <li>dusk</li>
+                <li>goat</li>
+            </ul>
+            <h2 id="about-name"></h2>
+            <p id="about-content"></p>
+            <footer class="unselectable">*names have been changed to protect the weird</footer>
         </body>
+        <script src="Resources/navbargenerator.js"></script>
         <script src="Resources/logoclickersimulator.js"></script>
     </html>
