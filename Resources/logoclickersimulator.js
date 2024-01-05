@@ -27,8 +27,8 @@ function init() {
     logo.addEventListener("click",()=>{
         if (!playing) {
             audioeysourcey.play();
-            logo.parentElement.style.filter = "invert() saturate(10)"
-            logo.style.filter = "invert() saturate(10)"
+            logo.parentElement.style.filter = "invert() saturate(10) hue-rotate(-35deg)"
+            logo.style.filter = "saturate(10) hue-rotate(180deg)"
         } else {
             audioeysourcey.load();
             logo.parentElement.style.filter = ""
